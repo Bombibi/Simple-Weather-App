@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div>
+      <section class="state-selection">
+        <h1>Select Your State:</h1>
+        <form method="post" action="/submit" id="stateForm">
+          <label for="state">State:</label>
+          <select name="state" id="items">
+            <option value="Kedah">Kedah</option>
+            <option value="Perak">Perak</option>
+            <option value="Perlis">Perlis</option>
+            <option value="Penang">Penang</option>
+            <option value="Negeri Sembilan">Negeri Sembilan</option>
+            <option value="Kelantan">Kelantan</option>
+            <option value="Sabah">Sabah</option>
+            <option value="Pahang">Pahang</option>
+            <option value="Selangor">Selangor</option>
+            <option value="Johor">Johor</option>
+          </select>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <% if(locals.content){ %>
+      <section class="description">
+        <div class="logo"><%= content %></div>
+        <div class="weather"><%= content %></div>
+        <div class="weather-description"><%= content %></div>
+      </section>
+
+      <% }else {%>
+      <div class="logo">
+        <img src="<%= weatherImage %>" alt="weather-image" />
+      </div>
+      <section class="description">
+        <div class="temp"><%= temp %> °C</div>
+        <div class="weather"><%= weather %></div>
+        <div class="weather-description"><%= description %></div>
+      </section>
+
+      <% } %>
+    </div>
+    <script src="/js/dropdown.js"></script>
+  </body>
+</html>

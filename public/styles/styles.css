@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "rubik-regular";
+  src: url("/font/RubikMaps-Regular.ttf") format("truetype");
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "rubik-regular";
+}
+
+body > div {
+  width: 500px;
+  height: 600px;
+  background-color: #c3e2c2;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.state-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 10l5 5 5-5z" /></svg>'); /* Custom arrow image */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the arrow on the right side */
+  background-size: 12px;
+  cursor: pointer;
+  background-color: #eaeccc;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  max-width: 80%;
+}
+
+.description {
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
