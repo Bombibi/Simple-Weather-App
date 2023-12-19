@@ -5,7 +5,7 @@ import axios from "axios";
 const app = express();
 const port = 3000;
 
-const apiKey = "afd0b9bc08baf6d4766e411efb792784";
+const apiKey = "";
 
 const location = [
   { state: "Kedah", lat: 6.155672, long: 100.569649 },
